@@ -77,12 +77,14 @@ function applyFilterByName() {
 
 function applyFilterByCredito() { 
     let max =+maxCred.value;
-    (max == null) ? '' : max;
-    let min=+minCred.value;
-    (min == null) ? '' : min;
-    clearCoursesInTable();
+    let min=+minCred.value; 
+        clearCoursesInTable();
+        console.log(max+""+min);
+        if(max>0&&min>0){
     let coursesFiltered: Course[] = searchCourseByCreditos(max,min, dataCourses);
     renderCoursesInTable(coursesFiltered);
+        }
+    
   }
 
 function searchCourseByName(nameKey: string, courses: Course[]) {

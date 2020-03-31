@@ -50,12 +50,13 @@ function applyFilterByName() {
 }
 function applyFilterByCredito() {
     var max = +maxCred.value;
-    (max == null) ? '' : max;
     var min = +minCred.value;
-    (min == null) ? '' : min;
     clearCoursesInTable();
-    var coursesFiltered = searchCourseByCreditos(max, min, dataCourses);
-    renderCoursesInTable(coursesFiltered);
+    console.log(max + "" + min);
+    if (max > 0 && min > 0) {
+        var coursesFiltered = searchCourseByCreditos(max, min, dataCourses);
+        renderCoursesInTable(coursesFiltered);
+    }
 }
 function searchCourseByName(nameKey, courses) {
     return nameKey === '' ? dataCourses : courses.filter(function (c) {
