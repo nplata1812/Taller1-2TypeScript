@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taller 1</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+<body>
+
+<body>
+    <div class="container">
+        <div class="row mt-3">
+            <div class="col border">
+                <h1>Nestor Andres Plata</h1>
+                <img class="img-fluid" src="https://images5.alphacoders.com/655/thumb-1920-655708.png" alt="Avatar" width="200" height="200">
+                <div class="h3 p-3 border">Datos Personales</div>
+                <table class="table border">
+                   <tbody id="student">
+                    </tbody>
+                </table>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="h3 p-3">Cursos Actuales</div>
+                        <form class="m-3"> 
+                            <div class="form-row">
+                                <div class="col">
+                                    <input type="text" class="form-control" id="search-box"
+                                        placeholder="Filtrar por nombre">
+                                </div>
+                                <div class="col">
+                                    <button type="button" id="button-filterByName"
+                                        class="btn btn-success">Aplicar</button>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="col">
+                                    <input type="text" class="form-control" id="maxCred"
+                                        placeholder="Creditos Max">
+                                </div>
+                                <div class="col">
+                                    <input type="text" class="form-control" id="minCred"
+                                        placeholder="Creditos Min">
+                                </div>
+                                <div class="col">
+                                    <button type="button" id="button-filterByCreditos"
+                                        class="btn btn-success">Filtrar por creditos</button>
+                                </div>
+
+
+                                
+                            </div>
+
+
+
+
+
+                        </form>
+                        <table class="table">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th>Curso</th>
+                                    <th>Profesor</th>
+                                    <th>Créditos</th>
+                                </tr>
+                            </thead>
+                            <tbody id="courses">
+                            </tbody>
+                        </table>
+                        <div class="row justify-content-end">
+                            <h5 class="col-4"><strong>Total Créditos:</strong></h5>
+                            <h5 class="col-4" id="total-credits"><strong></strong></h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="./scripts/course.js" ></script>
+    <script type="module" src="./scripts/dataCourses.js" ></script>
+    <script type="module" src="./scripts/main.js"></script>
+</body>
+</html>
